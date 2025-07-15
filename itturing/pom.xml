@@ -15,6 +15,19 @@
     <modules>
         <module>itturing-part3</module>
         <module>itturing-part3/part3-chapter01</module>
+        <module>itturing-part3/part3-chapter02</module>
+        <module>itturing-part3/part3-chapter03</module>
+        <module>itturing-part3/part3-chapter04</module>
+        <module>itturing-part3/part3-chapter06</module>
+        <module>itturing-part3/part3-chapter07</module>
+        <module>itturing-part3/part3-chapter08</module>
+        <module>itturing-part3/part3-chapter09</module>
+        <module>itturing-part3/part3-chapter11</module>
+        <module>itturing-part3/part3-chapter12</module>
+        <module>itturing-part3/part3-chapter13</module>
+        <module>itturing-part3/part3-chapter14</module>
+        <module>itturing-part3/part3-chapter16</module>
+        <module>itturing-part3/part3-chapter17</module>
     </modules>
 
     <properties>

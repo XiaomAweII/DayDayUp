@@ -5,16 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.maxiaowei</groupId>
-        <artifactId>DayDayUp</artifactId>
+        <artifactId>itturing</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>itturing</artifactId>
-
+    <artifactId>itturing-part3</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>itturing-part3</module>
-    </modules>
+    <description>三、并发编程专题</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

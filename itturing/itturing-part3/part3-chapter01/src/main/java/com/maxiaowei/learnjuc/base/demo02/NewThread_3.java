@@ -1,8 +1,7 @@
-package com.maxiaowei.learnjuc.demo02;
+package com.maxiaowei.learnjuc.base.demo02;
 
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 

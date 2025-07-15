@@ -1,4 +1,4 @@
-package com.maxiaowei.learnjuc.demo01;
+package com.maxiaowei.learnjuc.base.demo01;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadInfo;

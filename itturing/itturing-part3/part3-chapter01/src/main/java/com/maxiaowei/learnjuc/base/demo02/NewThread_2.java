@@ -1,4 +1,4 @@
-package com.maxiaowei.learnjuc.demo02;
+package com.maxiaowei.learnjuc.base.demo02;
 
 /**
  * 功能描述: 线程的创建和启动

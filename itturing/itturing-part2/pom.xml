@@ -19,6 +19,21 @@
         <module>part2-chapter05</module>
         <module>part2-chapter06</module>
         <module>part2-chapter08</module>
+        <module>part2-chapter09</module>
+        <module>part2-chapter10</module>
+        <module>part2-chapter11</module>
+        <module>part2-chapter12</module>
+        <module>part2-chapter13</module>
+        <module>part2-chapter14</module>
+        <module>part2-chapter15</module>
+        <module>part2-chapter16</module>
+        <module>part2-chapter17</module>
+        <module>part2-chapter18</module>
+        <module>part2-chapter19</module>
+        <module>part2-chapter20</module>
+        <module>part2-chapter21</module>
+        <module>part2-chapter22</module>
+        <module>part2-chapter23</module>
     </modules>
 
     <artifactId>itturing-part2</artifactId>

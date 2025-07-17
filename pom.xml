@@ -12,6 +12,7 @@
     <description>根项目</description>
     <modules>
         <module>itturing</module>
+        <module>itturing/itturing-part4/part4-chapter05</module>
     </modules>
 
     <properties>

@@ -5,20 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.maxiaowei</groupId>
-        <artifactId>itturing</artifactId>
+        <artifactId>DayDayUp</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>itturing-part4</artifactId>
+    <artifactId>part4-chapter05</artifactId>
 
     <packaging>pom</packaging>
     <modules>
-        <module>part4-chapter01</module>
-        <module>part4-chapter02</module>
-        <module>part4-chapter03</module>
-        <module>part4-chapter04</module>
-        <module>part4-chapter06</module>
-        <module>part4-chapter07</module>
+        <module>redis-multi-cache</module>
     </modules>
 
     <properties>

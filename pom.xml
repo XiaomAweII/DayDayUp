@@ -13,6 +13,7 @@
     <modules>
         <module>itturing</module>
         <module>itturing/itturing-part4/part4-chapter05</module>
+        <module>luren-master</module>
     </modules>
 
     <properties>

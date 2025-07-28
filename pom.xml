@@ -15,6 +15,7 @@
         <module>itturing/itturing-part4/part4-chapter05</module>
         <module>luren-master</module>
         <module>java-learn</module>
+        <module>it-math</module>
     </modules>
 
     <properties>

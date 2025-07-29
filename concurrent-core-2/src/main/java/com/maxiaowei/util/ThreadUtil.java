@@ -25,4 +25,8 @@ public class ThreadUtil {
             throw new RuntimeException(e);
         }
     }
+
+    public static void sleepSeconds(int seconds) {
+        ThreadUtil.sleepMilliSeconds(seconds * 1_000);
+    }
 }

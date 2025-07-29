@@ -16,6 +16,7 @@
         <module>luren-master</module>
         <module>java-learn</module>
         <module>it-math</module>
+        <module>concurrent-core-2</module>
     </modules>
 
     <properties>

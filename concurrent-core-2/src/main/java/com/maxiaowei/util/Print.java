@@ -25,4 +25,18 @@ public class Print {
         }
         System.out.println(str);
     }
+
+    public static void hint(String str) {
+        // 获取当前线程的堆栈信息
+        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+        if (stackTrace.length > 2) {
+            StackTraceElement curMethod = stackTrace[1];
+            StackTraceElement caller = stackTrace[2];
+            String simpleName = Print.class.getSimpleName();
+            String curMethodName = curMethod.getMethodName();
+            String methodName = caller.getMethodName();
+            str = String.format("[%s|%s.%s]: /--%s--/", methodName, simpleName, curMethodName, str);
+        }
+        System.out.println(str);
+    }
 }

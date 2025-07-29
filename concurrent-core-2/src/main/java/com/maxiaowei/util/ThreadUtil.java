@@ -17,4 +17,12 @@ public class ThreadUtil {
     public static String getCurThreadName() {
         return Thread.currentThread().getName();
     }
+
+    public static void sleepMilliSeconds(int milliSeconds) {
+        try {
+            Thread.sleep(milliSeconds);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

@@ -1,0 +1,7 @@
+'test
+@startuml
+participant Alice as A
+participant Bob as B
+A->B: A->B
+B-->A: Hi!
+@enduml

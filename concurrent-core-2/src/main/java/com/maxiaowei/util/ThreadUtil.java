@@ -1,5 +1,7 @@
 package com.maxiaowei.util;
 
+import java.util.concurrent.locks.LockSupport;
+
 /**
  * 功能描述:
  * <p>
@@ -18,15 +20,23 @@ public class ThreadUtil {
         return Thread.currentThread().getName();
     }
 
+    public static Thread.State getCurThreadState() {
+        return Thread.currentThread().getState();
+    }
+
+    public static String getName() {
+        return getCurThreadName();
+    }
+
+    public static Thread.State getState() {
+        return getCurThreadState();
+    }
+
     public static void sleepMilliSeconds(int milliSeconds) {
-        try {
-            Thread.sleep(milliSeconds);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        LockSupport.parkNanos(milliSeconds * 1_000_000L);
     }
 
     public static void sleepSeconds(int seconds) {
-        ThreadUtil.sleepMilliSeconds(seconds * 1_000);
+        sleepMilliSeconds(seconds * 1_000);
     }
 }

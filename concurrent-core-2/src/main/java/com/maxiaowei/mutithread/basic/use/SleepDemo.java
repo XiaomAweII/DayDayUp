@@ -24,7 +24,11 @@ public class SleepDemo {
             for (int i = 0; i < MAX_TURN; i++) {
                 Print.tco(ThreadUtil.getName() + ", 睡眠轮次: " + i);
                 // 线程睡眠一会
-                ThreadUtil.sleepMilliSeconds(SLEEP_GAP);
+                try {
+                    Thread.sleep(SLEEP_GAP);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
             Print.tco(ThreadUtil.getName() + " 运行结束.");
         }

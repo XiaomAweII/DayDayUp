@@ -39,4 +39,18 @@ public class Print {
         }
         System.out.println(str);
     }
+
+    /**
+     * 在正式输出的内容前, 输出线程的名称
+     *
+     * @param s 待输出的字符串
+     */
+    public static void tco(Object s) {
+        String cft = "[" + Thread.currentThread().getName() + "]" + ":" + s;
+        ThreadUtil.exectute(() -> {
+            synchronized (System.out) {
+                System.out.println(cft);
+            }
+        });
+    }
 }

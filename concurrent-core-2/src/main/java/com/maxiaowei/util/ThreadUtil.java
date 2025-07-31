@@ -39,4 +39,8 @@ public class ThreadUtil {
     public static void sleepSeconds(int seconds) {
         sleepMilliSeconds(seconds * 1_000);
     }
+
+    public static void exectute(Runnable runnable) {
+        new Thread(runnable).start();
+    }
 }

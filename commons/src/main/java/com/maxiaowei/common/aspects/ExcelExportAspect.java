@@ -1,6 +1,7 @@
 package com.maxiaowei.common.aspects;
 
 import com.maxiaowei.common.entities.excel.ExcelExportResponse;
+import com.maxiaowei.common.utils.ExcelExportUtil;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -20,7 +21,7 @@ public class ExcelExportAspect {
         if (result instanceof ExcelExportResponse) {
             ExcelExportResponse response = (ExcelExportResponse) result;
             // 下载excel
-//            ExcelExportUtils.writeExcelToResponse(response);
+            ExcelExportUtil.writeExcelToResponse(response);
             return null;
         }
         return result;

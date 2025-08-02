@@ -1,10 +1,15 @@
 package com.maxiaowei.common;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * 定义通用业务异常
  * <p>
  * 作者: maxiaowei
  */
+@Setter
+@Getter
 public class BusinessException extends RuntimeException {
     private String code;
 
@@ -24,14 +29,6 @@ public class BusinessException extends RuntimeException {
      */
     public BusinessException(String code, String message, Throwable cause) {
         super(message, cause);
-        this.code = code;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
         this.code = code;
     }
 }

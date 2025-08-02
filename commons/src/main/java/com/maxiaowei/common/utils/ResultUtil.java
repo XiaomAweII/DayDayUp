@@ -1,5 +1,6 @@
 package com.maxiaowei.common.utils;
 
+import com.maxiaowei.common.PageResult;
 import com.maxiaowei.common.Result;
 
 /**
@@ -28,6 +29,10 @@ public class ResultUtil {
         return new Result<>(true, data, message, code);
     }
 
+    public static <T> PageResult<T> success(T data, long current, long code, long page) {
+        return new PageResult<>(true, data, current, code, page);
+    }
+
     public static <T> Result<T> error() {
         return new Result<>(false, null, null);
     }
@@ -38,5 +43,12 @@ public class ResultUtil {
 
     public static <T> Result<T> error(String code, String message) {
         return new Result<>(false, null, code, message);
+    }
+
+    public static <T> PageResult<T> error(String code, String message, long current, long size) {
+        PageResult<T> pageResult = new PageResult<>(false, null, current, size, 0);
+        pageResult.setCode(code);
+        pageResult.setMsg(message);
+        return pageResult;
     }
 }

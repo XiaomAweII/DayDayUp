@@ -1,10 +1,17 @@
 package com.maxiaowei.common;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  * 定义通用返回值
  * <p>
  * 作者: maxiaowei
  */
+@Setter
+@Getter
+@NoArgsConstructor
 public class Result<T> {
     /**
      * 请求处理是否成功
@@ -42,35 +49,4 @@ public class Result<T> {
         this.msg = msg;
     }
 
-    public boolean isSuccess() {
-        return success;
-    }
-
-    public void setSuccess(boolean success) {
-        this.success = success;
-    }
-
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
 }

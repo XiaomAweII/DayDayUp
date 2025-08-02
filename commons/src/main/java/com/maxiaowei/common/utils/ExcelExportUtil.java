@@ -50,12 +50,12 @@ public class ExcelExportUtil {
      * @return List<Map < String, String>> list值为行数据, key为头字段名称, value为该行字段值
      */
     public static List<Map<String, String>> buildSheetDataList(List<?> dataList, ExcelExportRequest request) {
-        if (CollectionUtils.isEmpty(dataList)) {
-            return CollectionUtils.emptyArrayList();
+        if (CollectionUtil.isEmpty(dataList)) {
+            return CollectionUtil.emptyArrayList();
         }
         List<Map<String, String>> sheetDataList = new ArrayList<>(dataList.size());
         List<ExcelExportField> fieldList = request.getFieldList();
-        List<String> exportFieldNameList = CollectionUtils.convertList(fieldList, ExcelExportField::getFieldName);
+        List<String> exportFieldNameList = CollectionUtil.convertList(fieldList, ExcelExportField::getFieldName);
 
         for (Object data : dataList) {
             HashMap<String, String> dataMap = new HashMap<>();
@@ -147,9 +147,9 @@ public class ExcelExportUtil {
 
     public static List<List<String>> buildEasyExcelHead(ExcelSheet excelSheet) {
         if (excelSheet == null || excelSheet.getHeadList() == null) {
-            return CollectionUtils.emptyArrayList();
+            return CollectionUtil.emptyArrayList();
         }
-        return excelSheet.getHeadList().stream().map(item -> CollectionUtils.newArrayList(item.getFieldDesc())).collect(Collectors.toList());
+        return excelSheet.getHeadList().stream().map(item -> CollectionUtil.newArrayList(item.getFieldDesc())).collect(Collectors.toList());
     }
 
     /**
@@ -160,9 +160,9 @@ public class ExcelExportUtil {
      */
     public static List<List<String>> buildEasyExcelDataList(ExcelSheet excelSheet) {
         if (excelSheet == null || excelSheet.getHeadList() == null || excelSheet.getDataList() == null) {
-            return CollectionUtils.newArrayList();
+            return CollectionUtil.newArrayList();
         }
-        List<String> filedNameList = CollectionUtils.convertList(excelSheet.getHeadList(), ExcelHead::getFieldName);
+        List<String> filedNameList = CollectionUtil.convertList(excelSheet.getHeadList(), ExcelHead::getFieldName);
         List<List<String>> dataList = new ArrayList<>(excelSheet.getDataList().size());
 
         for (Map<String, String> row : excelSheet.getDataList()) {

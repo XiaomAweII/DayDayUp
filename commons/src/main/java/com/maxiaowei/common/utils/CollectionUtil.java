@@ -1,5 +1,7 @@
 package com.maxiaowei.common.utils;
 
+import org.apache.commons.collections4.CollectionUtils;
+
 import java.util.*;
 import java.util.function.*;
 import java.util.stream.Collectors;
@@ -9,8 +11,8 @@ import java.util.stream.Collectors;
  * <p>
  * 作者: maxiaowei
  */
-public class CollectionUtils {
-    private CollectionUtils() {
+public class CollectionUtil {
+    private CollectionUtil() {
 
     }
 
@@ -529,7 +531,7 @@ public class CollectionUtils {
      * @return
      */
     public static int size(final Object object) {
-        return org.apache.commons.collections4.CollectionUtils.size(object);
+        return CollectionUtils.size(object);
     }
 
     /**

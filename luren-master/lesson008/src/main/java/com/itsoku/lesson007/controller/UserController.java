@@ -2,6 +2,7 @@ package com.itsoku.lesson007.controller;
 
 import cn.hutool.json.JSON;
 import cn.hutool.json.JSONUtil;
+import com.itsoku.lesson007.aspect.ExcelExport;
 import com.itsoku.lesson007.dto.UserExportRequest;
 import com.itsoku.lesson007.excel.ExcelExportResponse;
 import com.itsoku.lesson007.excel.ExcelExportUtils;
@@ -27,12 +28,14 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @ExcelExport
     @GetMapping("/userList")
     public String userList(Model model) {
         model.addAttribute("userList", this.userService.getUserList());
         return "userList";
     }
 
+    @ExcelExport
     @PostMapping("/userExport")
     @ResponseBody
     public ExcelExportResponse userExport(@RequestBody UserExportRequest userExportRequest) throws IOException {

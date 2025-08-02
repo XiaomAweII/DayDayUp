@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class ExcelExportAspect {
-    @Around(value = "execution(* com.itsoku..*Controller.*(..))")
+    @Around("@annotation(ExcelExport)")
     public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         Object result = proceedingJoinPoint.proceed();
         if (result instanceof ExcelExportResponse) {

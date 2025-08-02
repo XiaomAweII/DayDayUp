@@ -1,4 +1,4 @@
-package com.maxiaowei.common.excel;
+package com.maxiaowei.common.entities.excel;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

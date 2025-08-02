@@ -1,6 +1,6 @@
 package com.maxiaowei.common.aspects;
 
-import com.maxiaowei.common.excel.ExcelExportResponse;
+import com.maxiaowei.common.entities.excel.ExcelExportResponse;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;

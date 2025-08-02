@@ -5,7 +5,7 @@ import cn.hutool.core.util.ReflectUtil;
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.write.metadata.WriteSheet;
-import com.maxiaowei.common.excel.*;
+import com.maxiaowei.common.entities.excel.*;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;

@@ -18,6 +18,7 @@
         <module>it-math</module>
         <module>concurrent-core-2</module>
         <module>see-algorithm</module>
+        <module>commons</module>
     </modules>
 
     <properties>

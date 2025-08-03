@@ -1,6 +1,6 @@
 package com.maxiaowei.common.webhandler;
 
-import com.maxiaowei.common.BusinessException;
+import com.maxiaowei.common.BusinessRuntimeException;
 import com.maxiaowei.common.Result;
 import com.maxiaowei.common.constants.ErrorCode;
 import com.maxiaowei.common.utils.ResultUtil;
@@ -26,8 +26,8 @@ public class GlobalExceptionHandler {
      * @param request 当前请求
      * @return
      */
-    @ExceptionHandler(BusinessException.class)
-    public Result handleBusinessException(BusinessException e, HttpServletRequest request) {
+    @ExceptionHandler(BusinessRuntimeException.class)
+    public Result handleBusinessException(BusinessRuntimeException e, HttpServletRequest request) {
         // TODO 此处只打印日志 具体结合业务场景根据异常处理数据
         log.error("request： {}, exception : {}", request.getRequestURI(), e.getMessage(), e);
         return ResultUtil.error(e.getCode(), e.getMessage());

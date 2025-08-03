@@ -10,14 +10,14 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-public class BusinessException extends RuntimeException {
+public class BusinessRuntimeException extends RuntimeException {
     private String code;
 
     /**
      * @param code    错误编码
      * @param message 错误提示
      */
-    public BusinessException(String code, String message) {
+    public BusinessRuntimeException(String code, String message) {
         super(message);
         this.code = code;
     }
@@ -27,7 +27,7 @@ public class BusinessException extends RuntimeException {
      * @param message 错误提示
      * @param cause   具体报错
      */
-    public BusinessException(String code, String message, Throwable cause) {
+    public BusinessRuntimeException(String code, String message, Throwable cause) {
         super(message, cause);
         this.code = code;
     }

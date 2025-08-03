@@ -1,18 +1,18 @@
-package com.itsoku.lesson019.log;
+package com.maxiaowei.common.aspects;
 
 import cn.hutool.json.JSONUtil;
+import com.maxiaowei.common.annotations.NoLog;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 import java.lang.annotation.Annotation;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
@@ -20,30 +20,23 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * <b>description</b>： Java高并发、微服务、性能优化实战案例100讲，视频号：程序员路人，源码 & 文档 & 技术支持，请加个人微信号：itsoku <br>
- * <b>time</b>：2024/4/14 14:24 <br>
- * <b>author</b>：ready likun_557@163.com
+ * 功能描述:
+ * <p>
+ * 作者: maxiaowei
  */
 @Order(value = Ordered.HIGHEST_PRECEDENCE)
 @Aspect
 @Component
+@Slf4j
 public class ControllerLogAspect {
-    private Logger logger = LoggerFactory.getLogger(ControllerLogAspect.class);
-
-    /**
-     * 拦截controller的所有方法
-     *
-     * @param joinPoint
-     * @return
-     */
-    @Around("execution(* com.itsoku..*Controller.*(..))")
-    public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
+    @Around("@annotation(com.maxiaowei.common.annotations.ControllerLog)")
+    public Object around(ProceedingJoinPoint joinPoint) throws Throwable{
         long st = System.currentTimeMillis();
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
         Object result = null;
         try {
             //打印处理当前请求的完整类名和方法名称
-            logger.info("接口方法：{}.{}", methodSignature.getDeclaringTypeName(), methodSignature.getName());
+            log.info("接口方法：{}.{}", methodSignature.getDeclaringTypeName(), methodSignature.getName());
 
             //获取所有要打印的参数，丢到map中，key为参数名称，value为参数的值，然后会将这个map以json格式输出
             Map<String, Object> logParamsMap = new LinkedHashMap<>();
@@ -59,14 +52,14 @@ public class ControllerLogAspect {
                     logParamsMap.put(parameterName, parameterValue);
                 }
             }
-            logger.info("方法参数列表：{}", JSONUtil.toJsonStr(logParamsMap));
+            log.info("方法参数列表：{}", JSONUtil.toJsonStr(logParamsMap));
 
             result = joinPoint.proceed();
             return result;
         } finally {
             //判断方法的返回值是否需要打印？方法上有 @NoLog 注解的，表示结果不打印返回值
             if (this.resultIsLog(methodSignature)) {
-                logger.info("方法返回值：{}", JSONUtil.toJsonStr(result));
+                log.info("方法返回值：{}", JSONUtil.toJsonStr(result));
             }
         }
     }

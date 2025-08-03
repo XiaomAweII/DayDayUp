@@ -64,7 +64,6 @@ public class DelayTaskProcessor implements Runnable, DisposableBean {
      */
     public DelayTaskProcessor(String name, int capacity, int concurrency) {
         if (capacity <= 0) {
-            // TODO 使用自定义业务异常替代
             throw new IllegalArgumentException("Illegal Capacity: " + capacity);
         }
         if (concurrency <= 0) {
@@ -78,7 +77,6 @@ public class DelayTaskProcessor implements Runnable, DisposableBean {
         this.consumerThreadList = new ArrayList<>(this.concurrency);
         for (int i = 0; i < this.concurrency; i++) {
             String consumerThreadName = this.generateConsumerThreadName(i);
-            // TODO 待用线程池替换掉
             Thread consumerThread = new Thread(consumerThreadName);
             consumerThread.start();
             this.consumerThreadList.add(consumerThread);

@@ -6,12 +6,11 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Excel导出标记注解
- * 被标注的方法返回的ExcelExportResponse时自动处理导出
+ * 功能描述:
  * <p>
  * 作者: maxiaowei
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ExcelExport {
+public @interface ControllerLog {
 }

@@ -36,6 +36,11 @@ public class Result<T> {
      */
     private String code;
 
+    /**
+     * 链路追踪id
+     */
+    private String traceId;
+
     public Result(boolean success, T data, String msg) {
         this.success = success;
         this.data = data;

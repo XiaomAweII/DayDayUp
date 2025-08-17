@@ -1,0 +1,32 @@
+轻松玩转微服务：新手入门Spring Cloud Alibaba
+https://www.processon.com/view/link/66dfe45b2b60b602aa257650?cid=66df03757d2f7c5c90f1955d
+
+
+Spring Cloud Alibaba入门到进阶实战课程大纲：https://www.processon.com/view/link/676ce1f3f80ce653025c43c9?cid=672449ba4357c65b53c696b1
+
+
+Nacos注册中心实战：https://www.processon.com/view/link/66ea397f447df77e43f88a4f
+
+负载均衡器LoadBalancer实战： https://www.processon.com/view/link/66ed063f3551d12631060747?cid=66ed06337d86f0041374a1e2
+
+服务调用组件OpenFeign实战 ： https://www.processon.com/view/link/66f272bbce5f3001cf4c7bbc
+
+Nacos配置中心实战 ： https://www.processon.com/view/link/66f63ee83551d1263111ceca
+
+Alibaba流控组件Sentinel实战： https://www.processon.com/view/link/67075d334b2fdd4df7f485b4?cid=66f8ae8b7d86f0041382d46c
+
+Alibaba分布式事务组件Seata实战：https://www.processon.com/view/link/6732101561fdee7d750b35ab
+
+微服务网关Spring Cloud Gateway实战 ：https://www.processon.com/view/link/67075df6a7a02c54be5a9537?cid=670638cbebac4f017e5ecfd5
+
+链路追踪组件Skywalking实战 ：https://www.processon.com/view/link/6732102d25e8fb30af32c3d3?cid=6727082025e8fb30af24d6e4
+
+微服务安全组件Sa-Token实战 ：https://www.processon.com/view/link/672f52ccadd5d50b9af02921?cid=672f43694357c65b53d38b0a
+
+
+
+项目地址：https://gitee.com/dongchenglin/vip_springcloud_alibaba_2024
+
+
+
+
